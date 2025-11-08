@@ -61,6 +61,6 @@ L’objectif de *Ruffinary* est aussi de :
 - **Contrôleur :** assure la logique applicative et la communication entre modèle et vue
 
 ### 🧠 Design Patterns utilisés
-- **Singleton :** pour la gestion unique de la connexion à la base de données  
+- **Singleton :** pour la gestion unique des entités 
 - **Composite :** pour la hiérarchisation des étagères et des films
 
