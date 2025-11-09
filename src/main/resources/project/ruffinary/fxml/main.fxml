@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+<BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.ruffinary.controller.MainController">
+
+    <top>
+
+        <fx:include fx:id="menuController" source="menu.fxml"/>
+
+    </top>
+
+    <!-- Bande latérale gauche -->
+    <left>
+        <VBox prefWidth="180" spacing="15" style="-fx-background-color: #2c3e50; -fx-padding: 15;">
+            <children>
+                <Button fx:id="entityManagerBtn" maxWidth="Infinity"
+                        style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Entity Manager"/>
+                <Button fx:id="shelfManagerBtn" maxWidth="Infinity"
+                        style="-fx-background-color: #1abc9c; -fx-text-fill: white;" text="Shelf Manager"/>
+                <Button fx:id="addBtn" maxWidth="Infinity" style="-fx-background-color: #F00020; -fx-text-fill: white;"
+                        text="Add Entity"/>
+            </children>
+        </VBox>
+
+    </left>
+
+    <!-- Zone principale à droite -->
+    <center>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            <!-- Barre de recherche -->
+            <HBox spacing="8">
+                <TextField fx:id="searchField" promptText="Rechercher une entité..." HBox.hgrow="ALWAYS"/>
+                <Button text="🔍"/>
+            </HBox>
+
+            <!-- TableView -->
+            <TableView fx:id="entityTable" VBox.vgrow="ALWAYS" stylesheets="@../css/main.css">
+                <columns>
+                    <TableColumn fx:id="colCode" prefWidth="120" text="Code"/>
+                    <TableColumn fx:id="colTitle" prefWidth="200" text="Titre"/>
+                    <TableColumn fx:id="colDirector" prefWidth="150" text="Réalisateur"/>
+                    <TableColumn fx:id="colFormat" prefWidth="100" text="Format"/>
+                    <TableColumn fx:id="colGenre" prefWidth="200" text="Genre"/>
+                    <TableColumn fx:id="colShelf" prefWidth="100" text="Étagère"/>
+                </columns>
+            </TableView>
+            <Label fx:id="dbStatusLabel" text="Connexion à la base..." style="-fx-text-fill: gray; -fx-padding: 5;"/>
+
+        </VBox>
+    </center>
+
+
+</BorderPane>

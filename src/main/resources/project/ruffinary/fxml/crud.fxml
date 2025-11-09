@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="project.ruffinary.controller.CrudController"
+            prefWidth="700" prefHeight="450"
+            stylesheets="@../css/crud.css"
+            styleClass="crud-root">
+
+
+
+    <!-- Contenu principal : fiche film -->
+    <center>
+        <HBox spacing="30" alignment="CENTER_LEFT" styleClass="crud-content">
+            <!-- Image du film -->
+            <ImageView fx:id="posterImage" fitWidth="160" fitHeight="240" preserveRatio="true" styleClass="poster-image"/>
+
+            <!-- Infos du film -->
+            <VBox spacing="12" styleClass="film-info">
+                <Label fx:id="titleLabel" text="Titre du film" styleClass="film-title"/>
+                <Label fx:id="directorLabel" text="Réalisateur : ..." styleClass="film-label"/>
+                <Label fx:id="editorLabel" text="Éditeur : ..." styleClass="film-label"/>
+                <Label fx:id="genreLabel" text="Genre : ..." styleClass="film-label"/>
+                <Label fx:id="yearLabel" text="Année : ..." styleClass="film-label"/>
+                <Label fx:id="formatLabel" text="Format : ..." styleClass="film-label"/>
+                <Label fx:id="shelfLabel" text="Étagère : ..." styleClass="film-label"/>
+            </VBox>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox spacing="12" alignment="CENTER" styleClass="crud-toolbar">
+            <children>
+                <Button text="Modifier" onAction="#updateEntity" styleClass="btn-edit"/>
+                <Button text="Supprimer" onAction="#deleteEntity" styleClass="btn-delete"/>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

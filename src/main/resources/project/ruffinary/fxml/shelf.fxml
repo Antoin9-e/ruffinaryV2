@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.ruffinary.controller.ShelfController">
+
+    <!-- Top toolbar: Ajouter, Modifier, Supprimer -->
+    <top>
+        <HBox spacing="8">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Button fx:id="addButton" text="Ajouter" onAction="#addNewShelf"/>
+                <Button fx:id="deleteButton" text="Supprimer" onAction="#deleteShelf" />
+                <Label text="" HBox.hgrow="ALWAYS"/>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Center: flow of shelf tiles inside scrollpane -->
+    <center>
+        <ScrollPane fitToWidth="true" pannable="true">
+            <FlowPane fx:id="shelvesFlow" hgap="12" vgap="12" prefWrapLength="800">
+                <padding>
+                    <Insets top="12" right="12" bottom="12" left="12"/>
+                </padding>
+            </FlowPane>
+        </ScrollPane>
+    </center>
+
+
+
+    <!-- Optional bottom status -->
+    <bottom>
+        <HBox>
+            <padding>
+                <Insets top="8" right="8" bottom="8" left="8"/>
+            </padding>
+            <children>
+                <Button fx:id="backBtn" text="retour"/>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

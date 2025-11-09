@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:id="rootPane" fx:controller="project.ruffinary.controller.AddController">
+    <VBox spacing="20" alignment="CENTER" >
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20" />
+        </padding>
+
+        <Label text="Ajouter un film" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="manualButton" text="Ajout manuel" />
+            <Button fx:id="barcodeButton" text="Scanner un code-barres" />
+        </HBox>
+
+        <!-- Formulaire manuel -->
+
+        <VBox fx:id="manualForm" spacing="10" visible="false" managed="false">
+            <Label text="Ajout manuel" style="-fx-font-size: 16px;" />
+
+            <HBox spacing="5">
+            <TextField fx:id="codeField" promptText="Ean/Upc ,etc.." />
+                <Button fx:id="codeBtn" text="Generer"/>
+            </HBox>
+            <TextField fx:id="titleField" promptText="Titre du film"/>
+            <TextField fx:id="editorField" promptText="Editeur" />
+            <TextField fx:id="directorField" promptText="Réalisateur" />
+            <TextField fx:id="genreField" promptText="Genre du films" />
+
+            <ComboBox fx:id="yearComboBox" promptText="Année de sortie" />
+
+            <HBox spacing="10">
+            <Label text="Format"/>
+            <ChoiceBox fx:id="formatChoiceBox">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="DVD" />
+                        <String fx:value="UMD" />
+                        <String fx:value="LD" />
+                        <String fx:value="BR" />
+                        <String fx:value="BR4K" />
+                        <String fx:value="HDDVD" />
+                        <String fx:value="BR3D" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            </HBox>
+            <Button fx:id="submitManualButton" text="Ajouter le film" />
+        </VBox>
+
+        <!-- Formulaire code-barres -->
+        <VBox fx:id="barcodeForm" spacing="10" visible="false" managed="false">
+            <Label text="Ajout par code-barres" style="-fx-font-size: 16px;" />
+            <TextField fx:id="barcodeField" promptText="Scanner ou entrer le code-barres" />
+            <CheckBox fx:id="laserdiscCheckBox" text="Laserdisc" />
+
+            <Button fx:id="submitBarcodeButton" text="Rechercher le film" />
+        </VBox>
+    </VBox>
+</StackPane>

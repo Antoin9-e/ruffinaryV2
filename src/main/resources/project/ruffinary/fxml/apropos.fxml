@@ -1,0 +1,19 @@
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="project.ruffinary.controller.AproposController"
+      spacing="20" alignment="CENTER" style="-fx-padding: 30;"
+      stylesheets="@../css/apropos.css"
+      styleClass="root">
+
+    <ImageView fx:id="photoView" fitWidth="150" fitHeight="150" preserveRatio="true" styleClass="image-view" />
+
+    <Label text="À propos de l'application" styleClass="label-title"/>
+    <Label text="Développé par Antoin9-e" styleClass="label-author"/>
+    <Hyperlink text="Mon GitHub : github.com/Antoin9-e" fx:id="githubLink"/>
+    <Label text="Technologies utilisées : JavaFX, Java, MySQL" styleClass="label-tech"/>
+
+</VBox>
