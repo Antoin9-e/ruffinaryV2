@@ -9,6 +9,46 @@ Cette version est une **refonte complète** du projet original, intégrant une a
 
 ---
 
+## installation du projet
+
+### 0. Téléchargez le dossier fournit ( contenant: fichier .jar,.sql.bat)
+
+### 1. Installer le JDK (Java Development Kit)
+
+- Téléchargez et installez un JDK **version 24 ou supérieure** depuis :
+  - [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html)
+  - [Adoptium](https://adoptium.net/)
+- Configurez la variable d’environnement `JAVA_HOME` :
+  - Windows : Ajoutez `JAVA_HOME` dans les variables système, pointant vers le dossier d’installation du JDK
+- Vérifiez que la commande `java` fonctionne :
+
+  ```bash  
+  
+  java -version
+  ```
+
+  ### 2.Installer JavaFX
+
+  -Télécharger JavaFX SDK depuis: [JavaFX](https:/gluonhq.com/products/javafx/)
+  -Décompressez le SDK et notez le chemin d'accès (exemple: C:\user\javafx-sdk-21.0.1)
+
+  ### 3.Installer MySQL Server et MySQL Workbench
+
+  -creer un utilisateur
+
+  -inserer le script fournit
+
+  #### 4.Vérification et lancement
+
+  -vérifier que java fonctionne (version supérieur ou égale a 24)
+
+  -modifier le launch.bat avec le path du sdk JavaFX et le path du jar executable (fournit dans le dossier)
+
+   ```bash
+  java --module-path "C:\Users\antoi\JavaFx\javafx-sdk-25.0.1\lib" --add-modules javafx.controls,javafx.fxml -jar "C:\Users\antoi\Desktop\Ruffinary-1.0-SNAPSHOT.jar"
+    ```
+  
+
 ## 🚀 Fonctionnalités
 
 ### 📚 Gestion de la collection
