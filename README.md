@@ -1,4 +1,5 @@
 # 🎬 RuffinaryV2 – Gestionnaire de Collection de Films
+<img src="https://github.com/Antoin9-e/ruffinaryV2/blob/master/src/main/resources/project/ruffinary/img/icon.ico" alt="Logo" width="150">
 
 ## 📖 Description du projet
 
